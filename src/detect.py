@@ -1,6 +1,7 @@
 import os
 import sys
 import torch
+import torchvision
 import numpy as np
 import pandas as pd
 from PIL import Image
@@ -18,12 +19,12 @@ class ObjectDetector:
         self.df_path = df_path
     
     
-    def detect_and_save_bboxes(
+    def detect(
+        self,
         image: Image.Image,
         labels: List[str],
-        threshold: float = 0.3,
-        detector_id: Optional[str] = None,
-        output_dir: str = "output_bboxes_tomatoes2",  # Directory to save the cropped images
+        threshold: float = 0.1,
+        detector_id: Optional[str] = None
     ) -> List[Dict[str, Any]]:
         """
         Use Grounding DINO to detect a set of labels in an image in a zero-shot fashion.
@@ -37,13 +38,26 @@ class ObjectDetector:
 
         # Load the zero-shot object detection pipeline
         object_detector = pipeline(model=detector_id, task="zero-shot-object-detection", device=device)
-
+        
         # Ensure labels end with a period
+        labels = [labels]
         labels = [label if label.endswith(".") else label + "." for label in labels]
+        print("labels:", labels)
+        
 
         # Perform object detection
         results = object_detector(image, candidate_labels=labels, threshold=threshold)
 
+        # Return the detection results
+        return results
+    
+    def save_bboxes(
+        self,
+        image,
+        results,
+        output_dir : str =  "../outputs/bboxes/unknown/"
+    ):
+        
         # Ensure output directory exists
         os.makedirs(output_dir, exist_ok=True)
 
@@ -72,31 +86,63 @@ class ObjectDetector:
             output_path = os.path.join(output_dir, f"detected_object_{i + 1}.jpg")
             cropped_image.save(output_path, "JPEG", quality=95)
 
-            print(f"Saved detected object {i + 1} to {output_path}")
-
-        # Return the detection results
-        return results
+        print(f"Saved {len(results)} detected objects to {output_dir}")
 
 
 
     def grounded_segmentation(
+        self,
         image: Union[Image.Image, str],
         labels: List[str],
-        threshold: float = 0.3,
+        threshold: float = 0.05,
+        output_dir: str = "../outputs/bboxes/",
         detector_id: Optional[str] = None
     ) -> Tuple[np.ndarray, List[DetectionResult]]:
         if isinstance(image, str):
             image = load_image(image)
 
-        detections = detect_and_save_bboxes(image, labels, threshold, detector_id)
+        detections = self.detect(image, labels, threshold, detector_id)
 
-        return np.array(image), detections
+        return detections
+    
+    
+    def nms(
+        self,
+        detections,
+        threshold: float = 0.3
+    ):
+        scores = [d["score"] for d in detections]
+        boxes = torch.tensor([list(d["box"].values()) for d in detections]).to(torch.float32)
+        return torchvision.ops.nms(boxes, torch.tensor(scores).to(torch.float32), threshold)
+    
     
     def main(self):
         df = pd.read_csv(self.df_path)
         
-        test_df = df[df["split"] == "test"]
-        print(test_df.head())
+        test_img_path = "../data/FSC147_384_V2/images/test/"
+        
+        test_df = df[df["split"] == "test"][20:30]
+        
+        print(test_df)
+        
+        detector_id = "IDEA-Research/grounding-dino-base"
+        
+        for idx, row in test_df.iterrows():
+            
+            img = Image.open(test_img_path + row["filename"])
+            
+            detections = self.grounded_segmentation(
+                image = img,
+                labels = row["class"] + ".",
+                threshold = 0.05,
+                detector_id = detector_id
+            )
+            
+            nms_idxs = self.nms(detections)
+            nms_boxes = [detections[idx] for idx in nms_idxs]
+            
+            self.save_bboxes(img, nms_boxes, "../outputs/bboxes/" + row["filename"][:-4] + "/")
+            
         
 
 if __name__ == "__main__":
