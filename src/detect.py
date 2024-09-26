@@ -134,7 +134,7 @@ class ObjectDetector:
             detections = self.grounded_segmentation(
                 image = img,
                 labels = row["class"] + ".",
-                threshold = 0.05,
+                threshold = 0.1,
                 detector_id = detector_id
             )
             
