@@ -4,6 +4,7 @@ import pandas as pd
 import transformers
 from transformers import AutoProcessor, LlavaForConditionalGeneration
 import torch
+from torch.utils.data import Dataset, DataLoader
 import os
 import sys
 import cv2
@@ -14,6 +15,7 @@ import requests
 
 sys.path.append("../")
 from utils.evaluation import mae, rmse
+from utils.dataset import ZSOCDataset
 
 class VLMQueryExecutor:
     def __init__(self, vlm_path, df_path):
@@ -39,51 +41,45 @@ class VLMQueryExecutor:
         processor = AutoProcessor.from_pretrained(self.vlm_path)
         
         for idx, row in tqdm(test_df.iterrows()):
-            obj_id = row["filename"][:-4]
-            obj_class = row["class"]
-            obj_prompt_notation = row["prompt_notation"]
-            obj_description = row["description"]
-            print("obj id:", obj_id)
             
-            """
-            conversation = [
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": f"How does {obj_prompt_notation} look like?"},
-                        ],
-                },
-                {
-                    "role": "assistant",
-                    "content": [{"type": "text", "text": f"{obj_description}"},]
-                },
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "image"},
-                        {"type": "text", "text": f"Is this {obj_prompt_notation}? Please answer with a yes or a no."},
-                        ],
-                },
-            ]
-
-            text_prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
-            """
+            dataset = ZSOCDataset(
+                image_folder = object_imgs_path + row["filename"][:-4],
+                obj_id = row["filename"][:-4],
+                obj_class = row["class"],
+                obj_prompt_notation = row["prompt_notation"],
+                obj_description = row["description"],
+                processor = processor
+            )
             
-            prompt = f"USER: How does {obj_prompt_notation} look like?\nASSISTANT: {obj_description}\nUSER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
-            #print(prompt)
-            obj_patches_path = object_imgs_path + obj_id
+            dataloader = DataLoader(
+                dataset,
+                batch_size=2,
+                num_workers=8
+            )
             counter = 0
-            for file in tqdm(os.listdir(obj_patches_path)):
+            for batch in tqdm(dataloader):
                 
-                img = Image.open(obj_patches_path + "/" + file)
+                img_paths = batch["img_paths"]
+                prompts = batch["prompts"]
                 
-                inputs = processor(text=prompt, images=img, return_tensors="pt").to("cuda")
-
+        
+                images = [Image.open(path) for path in img_paths]
+                
+                print("img 0:", images[0])
+                print("prompts 0:", prompts[0])
+                
+                inputs = processor(prompts[0], images=images[0], return_tensors="pt").to("cuda")
+                
                 # Generate
                 generate_ids = model.generate(**inputs, max_new_tokens=200)
-                text = processor.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
+                text = processor.batch_decode(
+                    generate_ids,
+                    skip_special_tokens=True,
+                    clean_up_tokenization_spaces=False
+                )
+                print("text:", text)
                 answer = text.split("ASSISTANT:")[2]
-                counter += (("Yes" in answer) or ("yes" in answer))
+                counter += ("yes" in answer.lowercase())
             
             test_df.loc[idx, "predicted_counts"] = counter
         
