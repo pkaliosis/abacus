@@ -2,12 +2,15 @@ import numpy as np
 import pandas as pd
 
 import transformers
+from transformers import AutoProcessor, LlavaForConditionalGeneration
 import torch
 import os
+import sys
+import cv2
+from tqdm import tqdm
 
 from PIL import Image
-
-from transformers import IdeficsForVisionText2Text, AutoProcessor
+import requests
 
 class VLMQueryExecutor:
     def __init__(self, vlm_path, df_path):
@@ -21,42 +24,42 @@ class VLMQueryExecutor:
         
         object_imgs_path = "../outputs/bboxes/"
         
-        test_df = df[df["split"] == "test"][20:30]
+        test_df = df[df["split"] == "test"][5:55]
+        test_df["predicted_counts"] = None
+
+    
+        print(test_df.head())
         
         device = "cuda" if torch.cuda.is_available() else "cpu"
-        checkpoint = "HuggingFaceM4/idefics-9b"
-        model = IdeficsForVisionText2Text.from_pretrained(checkpoint, torch_dtype=torch.int64).to(device)
-        processor = AutoProcessor.from_pretrained(checkpoint)
+
+        model = LlavaForConditionalGeneration.from_pretrained("llava-hf/llava-1.5-7b-hf").half().to("cuda")
+        processor = AutoProcessor.from_pretrained("llava-hf/llava-1.5-7b-hf")
         
-        for idx, row in test_df.iterrows():
+        for idx, row in tqdm(test_df.iterrows()):
             obj_id = row["filename"][:-4]
             obj_class = row["class"]
+            print("obj id:", obj_id)
             
+            prompt = f"USER: <image>\nIs this {obj_class}? Please answer with a yes or a no.\nASSISTANT:"
+            #print(prompt)
             obj_patches_path = object_imgs_path + obj_id
-            for file in os.listdir(obj_patches_path):
+            counter = 0
+            for file in tqdm(os.listdir(obj_patches_path)):
+                
                 img = Image.open(obj_patches_path + "/" + file)
-                # We feed to the model an arbitrary sequence of text strings and images. Images can be either URLs or PIL Images.
-                prompts = [
-                    [
-                        "\nUser:",
-                        img,
-                        f"Is this a single {obj_class}? Please answer with a yes or a no despite being unsure.<end_of_utterance>",
+                
+                inputs = processor(text=prompt, images=img, return_tensors="pt").to("cuda")
 
-                        "\nAssistant:",
-                    ],
-                ]
-                
-                inputs = processor(prompts, return_tensors="pt").to(device)
-                
-                # Generation args
-                bad_words_ids = processor.tokenizer(["<image>", "<fake_token_around_image>"], add_special_tokens=False).input_ids
-
-                generated_ids = model.generate(**inputs, bad_words_ids=bad_words_ids, max_length=100)
-                generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)
-                
-                for i, t in enumerate(generated_text):
-                    print(f"{i}:\n{t}\n")
+                # Generate
+                generate_ids = model.generate(**inputs, max_new_tokens=100)
+                text = processor.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
+                answer = text.split("ASSISTANT:")[1]
+                counter += (("Yes" in answer) or ("yes" in answer))
             
+            test_df.loc[idx, "predicted_counts"] = counter
+            
+        test_df.to_csv('../outputs/dfs/test_df_pred.csv')
+        
 
 if __name__ == "__main__":
     vlm_query_exec = VLMQueryExecutor("../data/FSC147_384_V2/annotations/annotations.csv", "../data/FSC147_384_V2/annotations/annotations.csv")
