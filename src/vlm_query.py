@@ -38,9 +38,10 @@ class VLMQueryExecutor:
         for idx, row in tqdm(test_df.iterrows()):
             obj_id = row["filename"][:-4]
             obj_class = row["class"]
+            obj_prompt_notation = row["prompt_notation"]
             print("obj id:", obj_id)
             
-            prompt = f"USER: <image>\nIs this {obj_class}? Please answer with a yes or a no.\nASSISTANT:"
+            prompt = f"USER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
             #print(prompt)
             obj_patches_path = object_imgs_path + obj_id
             counter = 0
