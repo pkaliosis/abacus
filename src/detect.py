@@ -13,7 +13,7 @@ from utils.utils import load_image, decide_threshold
 from utils.detection_result import DetectionResult
 
 class ObjectDetector:
-    
+
     def __init__(self, df_path):
         self.df_path = df_path
 
@@ -41,7 +41,7 @@ class ObjectDetector:
         # Ensure labels end with a period
         labels = [label if label.endswith(".") else label + "." for label in labels]
         print("labels:", labels)
-        
+
         # Perform object detection
         results = object_detector(image, candidate_labels=labels, threshold=threshold)
 
@@ -118,10 +118,10 @@ class ObjectDetector:
         detections
         ):
         boxes = torch.tensor([list(d["box"].values()) for d in detections]).to(torch.float32)
-        xmin = boxes[:,0].squeeze(-1)
-        ymin = boxes[:,1].squeeze(-1)
-        xmax = boxes[:,2].squeeze(-1)
-        ymax = boxes[:,3].squeeze(-1)
+        xmin = boxes[:,0].unsqueeze(-1)
+        ymin = boxes[:,1].unsqueeze(-1)
+        xmax = boxes[:,2].unsqueeze(-1)
+        ymax = boxes[:,3].unsqueeze(-1)
         sz = boxes.shape[0]
 
         keep_ind = ((xmax >= xmax.T)&(ymax >= ymax.T)&(xmin <= xmin.T)&(ymin <= ymin.T)&(torch.eye(sz).logical_not())).any(dim=-1).logical_not()
@@ -132,11 +132,11 @@ class ObjectDetector:
         df = pd.read_csv(self.df_path)
 
         test_img_path = "../data/FSC147_384_V2/images/test/"
-        
+
         test_df = df[df["split"] == "test"][5:55]
         # Apply the function to create the new column
         test_df['det_t'] = test_df['n_objects'].apply(decide_threshold)
-        
+
         print(test_df)
 
         detector_id = "IDEA-Research/grounding-dino-base"
