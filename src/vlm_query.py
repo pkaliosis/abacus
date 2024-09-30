@@ -17,6 +17,8 @@ sys.path.append("../")
 from utils.evaluation import mae, rmse
 from utils.dataset import ZSOCDataset
 
+#os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 class VLMQueryExecutor:
     def __init__(self, vlm_path, df_path):
         self.vlm_path = vlm_path
@@ -38,7 +40,7 @@ class VLMQueryExecutor:
         device = "cuda" if torch.cuda.is_available() else "cpu"
 
         model = LlavaForConditionalGeneration.from_pretrained(self.vlm_path).half().to("cuda")
-        processor = AutoProcessor.from_pretrained(self.vlm_path)
+        processor = AutoProcessor.from_pretrained(self.vlm_path, use_fast=False)
         
         for idx, row in tqdm(test_df.iterrows()):
             
@@ -48,13 +50,12 @@ class VLMQueryExecutor:
                 obj_class = row["class"],
                 obj_prompt_notation = row["prompt_notation"],
                 obj_description = row["description"],
-                processor = processor
             )
             
             dataloader = DataLoader(
                 dataset,
-                batch_size=2,
-                num_workers=8
+                batch_size=4,
+                num_workers=4
             )
             counter = 0
             for batch in tqdm(dataloader):
@@ -62,24 +63,20 @@ class VLMQueryExecutor:
                 img_paths = batch["img_paths"]
                 prompts = batch["prompts"]
                 
-        
                 images = [Image.open(path) for path in img_paths]
                 
-                print("img 0:", images[0])
-                print("prompts 0:", prompts[0])
-                
-                inputs = processor(prompts[0], images=images[0], return_tensors="pt").to("cuda")
+                inputs = processor(text=prompts, images=images, return_tensors="pt").to("cuda")
                 
                 # Generate
                 generate_ids = model.generate(**inputs, max_new_tokens=200)
-                text = processor.batch_decode(
+                texts = processor.batch_decode(
                     generate_ids,
                     skip_special_tokens=True,
                     clean_up_tokenization_spaces=False
                 )
-                print("text:", text)
-                answer = text.split("ASSISTANT:")[2]
-                counter += ("yes" in answer.lowercase())
+                answers = [text.split("ASSISTANT:")[2] for text in texts]
+                for answer in answers:
+                    counter += ("yes" in answer.lower())
             
             test_df.loc[idx, "predicted_counts"] = counter
         
