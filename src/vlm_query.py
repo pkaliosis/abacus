@@ -12,6 +12,9 @@ from tqdm import tqdm
 from PIL import Image
 import requests
 
+sys.path.append("../")
+from utils.evaluation import mae, rmse
+
 class VLMQueryExecutor:
     def __init__(self, vlm_path, df_path):
         self.vlm_path = vlm_path
@@ -86,6 +89,13 @@ class VLMQueryExecutor:
         
         test_df.drop("description", axis=1, inplace=True)
         test_df.to_csv('../outputs/dfs/test_df_pred.csv')
+        
+        # Evaluation
+        mae = mae(test_df["n_objects"], test_df["predictd_counts"])
+        rmse = rmse(test_df["n_objects"], test_df["predictd_counts"])
+        
+        print("Test MAE:", mae)
+        print("Test RMSE:", rmse)
         
 
 if __name__ == "__main__":
