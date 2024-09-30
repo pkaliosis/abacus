@@ -16,8 +16,8 @@ class ObjectDetector:
     
     def __init__(self, df_path):
         self.df_path = df_path
-    
-    
+
+
     def detect(
         self,
         image: Image.Image,
@@ -37,7 +37,7 @@ class ObjectDetector:
 
         # Load the zero-shot object detection pipeline
         object_detector = pipeline(model=detector_id, task="zero-shot-object-detection", device=device)
-        
+
         # Ensure labels end with a period
         labels = [label if label.endswith(".") else label + "." for label in labels]
         print("labels:", labels)
@@ -47,14 +47,14 @@ class ObjectDetector:
 
         # Return the detection results
         return results
-    
+
     def save_bboxes(
         self,
         image,
         results,
         output_dir : str =  "../outputs/bboxes/unknown/"
     ):
-        
+
         # Ensure output directory exists
         os.makedirs(output_dir, exist_ok=True)
 
@@ -101,8 +101,8 @@ class ObjectDetector:
         detections = self.detect(image, labels, threshold, detector_id)
 
         return detections
-    
-    
+
+
     def nms(
         self,
         detections,
@@ -111,11 +111,26 @@ class ObjectDetector:
         scores = [d["score"] for d in detections]
         boxes = torch.tensor([list(d["box"].values()) for d in detections]).to(torch.float32)
         return torchvision.ops.nms(boxes, torch.tensor(scores).to(torch.float32), threshold)
-    
-    
+
+
+    def big_box_suppress(
+        self,
+        detections
+        ):
+        boxes = torch.tensor([list(d["box"].values()) for d in detections]).to(torch.float32)
+        xmin = boxes[:,0].squeeze(-1)
+        ymin = boxes[:,1].squeeze(-1)
+        xmax = boxes[:,2].squeeze(-1)
+        ymax = boxes[:,3].squeeze(-1)
+        sz = boxes.shape[0]
+
+        keep_ind = ((xmax >= xmax.T)&(ymax >= ymax.T)&(xmin <= xmin.T)&(ymin <= ymin.T)&(torch.eye(sz).logical_not())).any(dim=-1).logical_not()
+        return keep_ind
+
+
     def main(self):
         df = pd.read_csv(self.df_path)
-        
+
         test_img_path = "../data/FSC147_384_V2/images/test/"
         
         test_df = df[df["split"] == "test"][5:55]
@@ -123,11 +138,11 @@ class ObjectDetector:
         test_df['det_t'] = test_df['n_objects'].apply(decide_threshold)
         
         print(test_df)
-        
+
         detector_id = "IDEA-Research/grounding-dino-base"
-        
+
         for idx, row in test_df.iterrows():
-            
+
             img = Image.open(test_img_path + row["filename"])
             labels = [row["class"], row["description"]]
             detections = self.grounded_segmentation(
@@ -136,15 +151,15 @@ class ObjectDetector:
                 threshold = row["det_t"],
                 detector_id = detector_id
             )
-            
+
             nms_idxs = self.nms(detections)
             nms_boxes = [detections[idx] for idx in nms_idxs]
-            
+
             self.save_bboxes(img, nms_boxes, "../outputs/bboxes/" + row["filename"][:-4] + "/")
-            
-        
+
+
 
 if __name__ == "__main__":
     detector = ObjectDetector("../data/FSC147_384_V2/annotations/desc_annotations.csv")
     detector.main()
-        
+
