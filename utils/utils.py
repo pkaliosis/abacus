@@ -19,3 +19,12 @@ def get_boxes(results: DetectionResult) -> List[List[List[float]]]:
         boxes.append(xyxy)
 
     return [boxes]
+
+
+def decide_threshold(n_objects):
+    if 0 <= n_objects < 25:
+        return 0.1
+    elif 25 <= n_objects < 50:
+        return 0.05
+    elif n_objects >= 50:
+        return 0.001
