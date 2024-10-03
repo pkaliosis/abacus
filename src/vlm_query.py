@@ -31,7 +31,8 @@ class VLMQueryExecutor:
         
         object_imgs_path = "../outputs/bboxes/"
         
-        test_df = df[df["split"] == "test"][5:55]
+        #test_df = df[df["split"] == "test"]
+        test_df = df
         test_df["predicted_counts"] = None
 
     
@@ -74,23 +75,23 @@ class VLMQueryExecutor:
                     skip_special_tokens=True,
                     clean_up_tokenization_spaces=False
                 )
-                answers = [text.split("ASSISTANT:")[2] for text in texts]
+                answers = [text.split("ASSISTANT:")[1] for text in texts]
                 for answer in answers:
                     counter += ("yes" in answer.lower())
             
             test_df.loc[idx, "predicted_counts"] = counter
         
         test_df.drop("description", axis=1, inplace=True)
-        test_df.to_csv('../outputs/dfs/test_df_pred.csv')
+        test_df.to_csv('../outputs/dfs/test_df_not_coco_only.csv')
         
         # Evaluation
-        mae = mae(test_df["n_objects"], test_df["predictd_counts"])
-        rmse = rmse(test_df["n_objects"], test_df["predictd_counts"])
+        mae_ = mae(test_df["n_objects"], test_df["predicted_counts"])
+        rmse_ = rmse(test_df["n_objects"], test_df["predicted_counts"])
         
-        print("Test MAE:", mae)
-        print("Test RMSE:", rmse)
+        print("Test MAE:", mae_)
+        print("Test RMSE:", rmse_)
         
 
 if __name__ == "__main__":
-    vlm_query_exec = VLMQueryExecutor("llava-hf/llava-1.5-7b-hf", "../data/FSC147_384_V2/annotations/desc_annotations.csv")
+    vlm_query_exec = VLMQueryExecutor("llava-hf/llava-1.5-7b-hf", "../data/FSC147_384_V2/annotations/desc_annotations_with_coco_2.csv")
     vlm_query_exec.main()

@@ -19,7 +19,7 @@ class ZSOCDataset(Dataset):
         self.obj_prompt_notation = obj_prompt_notation,
         self.obj_description = obj_description
         
-        self.prompt = f"USER: How does {obj_prompt_notation} look like?\nASSISTANT: {obj_description}\nUSER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
+        self.prompt = f"USER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
 
         self.images = [path for path in os.listdir(image_folder)]
 
