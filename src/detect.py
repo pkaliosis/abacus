@@ -40,6 +40,7 @@ class ObjectDetector:
 
         # Ensure labels end with a period
         labels = [label if label.endswith(".") else label + "." for label in labels]
+        
         print("labels:", labels)
 
         # Perform object detection
@@ -106,7 +107,7 @@ class ObjectDetector:
     def nms(
         self,
         detections,
-        threshold: float = 0.2
+        threshold: float = 0.25
     ):
         scores = [d["score"] for d in detections]
         boxes = torch.tensor([list(d["box"].values()) for d in detections]).to(torch.float32)
@@ -124,6 +125,13 @@ class ObjectDetector:
         ymax = boxes[:,3].unsqueeze(-1)
         sz = boxes.shape[0]
 
+        boxes = torch.tensor([list(d["box"].values()) for d in detections]).to(torch.float32)
+        xmin = boxes[:,0].unsqueeze(-1)
+        ymin = boxes[:,1].unsqueeze(-1)
+        xmax = boxes[:,2].unsqueeze(-1)
+        ymax = boxes[:,3].unsqueeze(-1)
+        sz = boxes.shape[0]
+
         keep_ind = ((xmax >= xmax.T)&(ymax >= ymax.T)&(xmin <= xmin.T)&(ymin <= ymin.T)&(torch.eye(sz).logical_not())).any(dim=-1).logical_not()
         return keep_ind
 
@@ -132,8 +140,8 @@ class ObjectDetector:
         df = pd.read_csv(self.df_path)
 
         test_img_path = "../data/FSC147_384_V2/images/test/"
-
-        test_df = df[df["split"] == "test"][5:55]
+        
+        test_df = df[df["split"] == "test_coco"]
         # Apply the function to create the new column
         test_df['det_t'] = test_df['n_objects'].apply(decide_threshold)
 
@@ -154,12 +162,16 @@ class ObjectDetector:
 
             nms_idxs = self.nms(detections)
             nms_boxes = [detections[idx] for idx in nms_idxs]
+            
+            #bbs_idxs = self.big_box_suppress(nms_boxes)
+            #bbs_boxes = [nms_boxes[i] for i in range(len(nms_boxes)) if not bbs_idxs.logical_not()[i]]
+
 
             self.save_bboxes(img, nms_boxes, "../outputs/bboxes/" + row["filename"][:-4] + "/")
 
 
 
 if __name__ == "__main__":
-    detector = ObjectDetector("../data/FSC147_384_V2/annotations/desc_annotations.csv")
+    detector = ObjectDetector("../data/FSC147_384_V2/annotations/desc_annotations_with_coco_2.csv")
     detector.main()
 

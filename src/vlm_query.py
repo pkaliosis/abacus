@@ -4,6 +4,7 @@ import pandas as pd
 import transformers
 from transformers import AutoProcessor, LlavaForConditionalGeneration
 import torch
+from torch.utils.data import Dataset, DataLoader
 import os
 import sys
 import cv2
@@ -14,6 +15,9 @@ import requests
 
 sys.path.append("../")
 from utils.evaluation import mae, rmse
+from utils.dataset import ZSOCDataset
+
+#os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 class VLMQueryExecutor:
     def __init__(self, vlm_path, df_path):
@@ -27,7 +31,8 @@ class VLMQueryExecutor:
         
         object_imgs_path = "../outputs/bboxes/"
         
-        test_df = df[df["split"] == "test"][5:55]
+        #test_df = df[df["split"] == "test"]
+        test_df = df
         test_df["predicted_counts"] = None
 
     
@@ -36,68 +41,57 @@ class VLMQueryExecutor:
         device = "cuda" if torch.cuda.is_available() else "cpu"
 
         model = LlavaForConditionalGeneration.from_pretrained(self.vlm_path).half().to("cuda")
-        processor = AutoProcessor.from_pretrained(self.vlm_path)
+        processor = AutoProcessor.from_pretrained(self.vlm_path, use_fast=False)
         
         for idx, row in tqdm(test_df.iterrows()):
-            obj_id = row["filename"][:-4]
-            obj_class = row["class"]
-            obj_prompt_notation = row["prompt_notation"]
-            obj_description = row["description"]
-            print("obj id:", obj_id)
             
-            """
-            conversation = [
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": f"How does {obj_prompt_notation} look like?"},
-                        ],
-                },
-                {
-                    "role": "assistant",
-                    "content": [{"type": "text", "text": f"{obj_description}"},]
-                },
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "image"},
-                        {"type": "text", "text": f"Is this {obj_prompt_notation}? Please answer with a yes or a no."},
-                        ],
-                },
-            ]
-
-            text_prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
-            """
+            dataset = ZSOCDataset(
+                image_folder = object_imgs_path + row["filename"][:-4],
+                obj_id = row["filename"][:-4],
+                obj_class = row["class"],
+                obj_prompt_notation = row["prompt_notation"],
+                obj_description = row["description"],
+            )
             
-            prompt = f"USER: How does {obj_prompt_notation} look like?\nASSISTANT: {obj_description}\nUSER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
-            #print(prompt)
-            obj_patches_path = object_imgs_path + obj_id
+            dataloader = DataLoader(
+                dataset,
+                batch_size=4,
+                num_workers=4
+            )
             counter = 0
-            for file in tqdm(os.listdir(obj_patches_path)):
+            for batch in tqdm(dataloader):
                 
-                img = Image.open(obj_patches_path + "/" + file)
+                img_paths = batch["img_paths"]
+                prompts = batch["prompts"]
                 
-                inputs = processor(text=prompt, images=img, return_tensors="pt").to("cuda")
-
+                images = [Image.open(path) for path in img_paths]
+                
+                inputs = processor(text=prompts, images=images, return_tensors="pt").to("cuda")
+                
                 # Generate
                 generate_ids = model.generate(**inputs, max_new_tokens=200)
-                text = processor.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
-                answer = text.split("ASSISTANT:")[2]
-                counter += (("Yes" in answer) or ("yes" in answer))
+                texts = processor.batch_decode(
+                    generate_ids,
+                    skip_special_tokens=True,
+                    clean_up_tokenization_spaces=False
+                )
+                answers = [text.split("ASSISTANT:")[1] for text in texts]
+                for answer in answers:
+                    counter += ("yes" in answer.lower())
             
             test_df.loc[idx, "predicted_counts"] = counter
         
         test_df.drop("description", axis=1, inplace=True)
-        test_df.to_csv('../outputs/dfs/test_df_pred.csv')
+        test_df.to_csv('../outputs/dfs/test_df_not_coco_only.csv')
         
         # Evaluation
-        mae = mae(test_df["n_objects"], test_df["predictd_counts"])
-        rmse = rmse(test_df["n_objects"], test_df["predictd_counts"])
+        mae_ = mae(test_df["n_objects"], test_df["predicted_counts"])
+        rmse_ = rmse(test_df["n_objects"], test_df["predicted_counts"])
         
-        print("Test MAE:", mae)
-        print("Test RMSE:", rmse)
+        print("Test MAE:", mae_)
+        print("Test RMSE:", rmse_)
         
 
 if __name__ == "__main__":
-    vlm_query_exec = VLMQueryExecutor("llava-hf/llava-1.5-7b-hf", "../data/FSC147_384_V2/annotations/desc_annotations.csv")
+    vlm_query_exec = VLMQueryExecutor("llava-hf/llava-1.5-7b-hf", "../data/FSC147_384_V2/annotations/desc_annotations_with_coco_2.csv")
     vlm_query_exec.main()
