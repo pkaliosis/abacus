@@ -1,3 +1,10 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+from typing import List, Dict, Any, Union, Optional
+from detection_result import DetectionResult
+
 def annotate(image: Union[Image.Image, np.ndarray], detection_results: List[DetectionResult]) -> np.ndarray:
     # Convert PIL Image to OpenCV format
     image_cv2 = np.array(image) if isinstance(image, Image.Image) else image
@@ -5,10 +12,10 @@ def annotate(image: Union[Image.Image, np.ndarray], detection_results: List[Dete
 
     # Iterate over detections and add bounding boxes and masks
     for detection in detection_results:
-        #label = detection.label
-        #score = detection.score
+        label = detection.label
+        score = detection.score
         box = detection.box
-        #mask = detection.mask
+        mask = detection.mask
 
         # Sample a random color for each detection
         color = np.random.randint(0, 256, size=3)
