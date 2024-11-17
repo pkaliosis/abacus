@@ -196,84 +196,84 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 194,2615.jpg,9,deers,test,"['deers', 'deer', 'bucks', 'animals with slender legs and antlers', 'animals with brown, short fur']",0.03
 195,2617.jpg,41,deers,test,"['deers', 'deer', 'bucks', 'animals with slender legs and antlers', 'animals with brown, short fur']",0.03
 196,2619.jpg,47,deers,test,"['deers', 'deer', 'bucks', 'animals with slender legs and antlers', 'animals with brown, short fur']",0.03
-197,285.jpg,28,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-198,286.jpg,10,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-199,287.jpg,21,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-200,288.jpg,26,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-201,289.jpg,26,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-202,290.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-203,2907.jpg,28,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-204,2908.jpg,33,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-205,291.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-206,2910.jpg,14,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-207,2912.jpg,72,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-208,2913.jpg,15,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-209,2914.jpg,28,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-210,2915.jpg,61,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-211,2916.jpg,202,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-212,2917.jpg,20,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-213,2918.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-214,292.jpg,32,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-215,2920.jpg,13,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-216,2921.jpg,27,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-217,2922.jpg,19,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-218,2923.jpg,86,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-219,2924.jpg,54,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-220,2925.jpg,65,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-221,2926.jpg,24,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-222,2927.jpg,49,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-223,2928.jpg,45,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-224,2929.jpg,77,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-225,293.jpg,41,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-226,2930.jpg,60,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-227,2931.jpg,43,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-228,2932.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-229,2933.jpg,45,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-230,2934.jpg,56,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-231,2935.jpg,13,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-232,2936.jpg,23,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-233,2937.jpg,78,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-234,2938.jpg,9,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-235,2939.jpg,52,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-236,294.jpg,124,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-237,2941.jpg,17,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-238,2942.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-239,2943.jpg,29,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-240,2944.jpg,68,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-241,2945.jpg,14,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-242,2946.jpg,12,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-243,2947.jpg,36,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-244,2948.jpg,11,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-245,2949.jpg,24,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-246,295.jpg,64,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-247,2951.jpg,14,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-248,2952.jpg,67,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-249,2953.jpg,22,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-250,2954.jpg,38,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-251,2955.jpg,105,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-252,2956.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-253,296.jpg,30,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-254,297.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-255,298.jpg,33,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-256,299.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+197,285.jpg,28,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+198,286.jpg,10,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+199,287.jpg,21,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+200,288.jpg,26,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+201,289.jpg,26,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+202,290.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+203,2907.jpg,28,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+204,2908.jpg,33,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+205,291.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+206,2910.jpg,14,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+207,2912.jpg,72,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+208,2913.jpg,15,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+209,2914.jpg,28,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+210,2915.jpg,61,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+211,2916.jpg,202,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+212,2917.jpg,20,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+213,2918.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+214,292.jpg,32,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+215,2920.jpg,13,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+216,2921.jpg,27,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+217,2922.jpg,19,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+218,2923.jpg,86,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+219,2924.jpg,54,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+220,2925.jpg,65,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+221,2926.jpg,24,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+222,2927.jpg,49,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+223,2928.jpg,45,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+224,2929.jpg,77,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+225,293.jpg,41,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+226,2930.jpg,60,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+227,2931.jpg,43,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+228,2932.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+229,2933.jpg,45,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+230,2934.jpg,56,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+231,2935.jpg,13,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+232,2936.jpg,23,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+233,2937.jpg,78,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+234,2938.jpg,9,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+235,2939.jpg,52,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+236,294.jpg,124,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+237,2941.jpg,17,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+238,2942.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+239,2943.jpg,29,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+240,2944.jpg,68,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+241,2945.jpg,14,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+242,2946.jpg,12,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+243,2947.jpg,36,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+244,2948.jpg,11,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+245,2949.jpg,24,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+246,295.jpg,64,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+247,2951.jpg,14,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+248,2952.jpg,67,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+249,2953.jpg,22,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+250,2954.jpg,38,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+251,2955.jpg,105,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+252,2956.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+253,296.jpg,30,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+254,297.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+255,298.jpg,33,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+256,299.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 257,3.jpg,11,hot air balloons,test,"['hot air balloons', 'hot air balloon', 'large, rounded objects with a basket underneath', 'aerial vessels with colorful fabric envelopes']",0.03
-258,300.jpg,33,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-259,301.jpg,28,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-260,302.jpg,20,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-261,303.jpg,51,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-262,305.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-263,306.jpg,30,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-264,307.jpg,21,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-265,308.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-266,309.jpg,113,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-267,310.jpg,65,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-268,311.jpg,55,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+258,300.jpg,33,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+259,301.jpg,28,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+260,302.jpg,20,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+261,303.jpg,51,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+262,305.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+263,306.jpg,30,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+264,307.jpg,21,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+265,308.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+266,309.jpg,113,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+267,310.jpg,65,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+268,311.jpg,55,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 269,3111.jpg,20,crab cakes,test,"['crab cakes', 'crab cake', 'seafood patties', 'round, golden-brown patties made from crab meat and breadcrumbs']",0.03
 270,3112.jpg,10,crab cakes,test,"['crab cakes', 'crab cake', 'seafood patties', 'round, golden-brown patties made from crab meat and breadcrumbs']",0.03
 271,3114.jpg,17,crab cakes,test,"['crab cakes', 'crab cake', 'seafood patties', 'round, golden-brown patties made from crab meat and breadcrumbs']",0.03
-272,312.jpg,53,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-273,313.jpg,23,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-274,315.jpg,53,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+272,312.jpg,53,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+273,313.jpg,23,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+274,315.jpg,53,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 275,3153.jpg,24,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
 276,3154.jpg,47,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
 277,3155.jpg,45,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
@@ -281,38 +281,38 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 279,3157.jpg,42,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
 280,3158.jpg,43,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
 281,3159.jpg,58,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
-282,316.jpg,25,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+282,316.jpg,25,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 283,3160.jpg,13,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
-284,317.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-285,319.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-286,320.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-287,321.jpg,39,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-288,322.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-289,323.jpg,25,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-290,324.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-291,325.jpg,33,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-292,326.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-293,3268.jpg,19,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-294,3269.jpg,20,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-295,327.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-296,3270.jpg,19,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-297,3271.jpg,21,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-298,3274.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-299,3275.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-300,3276.jpg,18,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-301,3278.jpg,30,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-302,3279.jpg,23,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-303,328.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-304,3281.jpg,15,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-305,3282.jpg,31,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-306,3283.jpg,37,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-307,3284.jpg,16,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-308,3285.jpg,34,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-309,329.jpg,19,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-310,330.jpg,25,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+284,317.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+285,319.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+286,320.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+287,321.jpg,39,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+288,322.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+289,323.jpg,25,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+290,324.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+291,325.jpg,33,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+292,326.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+293,3268.jpg,19,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+294,3269.jpg,20,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+295,327.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+296,3270.jpg,19,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+297,3271.jpg,21,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+298,3274.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+299,3275.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+300,3276.jpg,18,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+301,3278.jpg,30,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+302,3279.jpg,23,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+303,328.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+304,3281.jpg,15,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+305,3282.jpg,31,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+306,3283.jpg,37,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+307,3284.jpg,16,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+308,3285.jpg,34,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+309,329.jpg,19,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+310,330.jpg,25,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 311,3308.jpg,153,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 312,3309.jpg,16,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
-313,331.jpg,33,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+313,331.jpg,33,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 314,3310.jpg,31,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 315,3311.jpg,154,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 316,3312.jpg,136,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
@@ -322,7 +322,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 320,3317.jpg,43,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 321,3318.jpg,185,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 322,3319.jpg,68,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
-323,332.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+323,332.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 324,3320.jpg,159,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 325,3321.jpg,49,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 326,3322.jpg,450,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
@@ -332,7 +332,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 330,3327.jpg,33,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 331,3328.jpg,99,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 332,3329.jpg,178,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
-333,333.jpg,32,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+333,333.jpg,32,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 334,3330.jpg,57,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 335,3331.jpg,133,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 336,3332.jpg,66,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
@@ -343,24 +343,24 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 341,3337.jpg,295,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 342,3338.jpg,258,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 343,3339.jpg,25,sea shells,test,"['sea shells', 'sea shell', 'conch', 'curved, irregular objects with ridged surfaces', 'white, pink or brown curvy objects']",0.05
-344,334.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+344,334.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 345,3341.jpg,36,sea shells,test,"['sea shells', 'sea shell', 'conch', 'curved, irregular objects with ridged surfaces', 'white, pink or brown curvy objects']",0.05
 346,3342.jpg,12,sea shells,test,"['sea shells', 'sea shell', 'conch', 'curved, irregular objects with ridged surfaces', 'white, pink or brown curvy objects']",0.05
-347,335.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-348,336.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-349,337.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-350,339.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-351,340.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-352,341.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-353,342.jpg,63,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+347,335.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+348,336.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+349,337.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+350,339.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+351,340.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+352,341.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+353,342.jpg,63,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 354,3424.jpg,12,crab cakes,test,"['crab cakes', 'crab cake', 'seafood patties', 'round, golden-brown patties made from crab meat and breadcrumbs']",0.03
-355,343.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-356,344.jpg,43,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-357,345.jpg,63,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-358,346.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-359,347.jpg,41,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-360,348.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-361,349.jpg,39,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+355,343.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+356,344.jpg,43,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+357,345.jpg,63,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+358,346.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+359,347.jpg,41,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+360,348.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+361,349.jpg,39,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 362,3493.jpg,45,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
 363,3494.jpg,37,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
 364,3495.jpg,107,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
@@ -368,11 +368,11 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 366,3497.jpg,161,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
 367,3498.jpg,96,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
 368,3499.jpg,91,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
-369,350.jpg,17,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+369,350.jpg,17,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 370,3500.jpg,15,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
 371,3501.jpg,60,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
 372,3502.jpg,70,red beans,test,"['red beans', 'red bean', 'kidney beans', 'small, oval-shaped legumes', 'smooth seeds with a glossy surface']",0.01
-373,351.jpg,41,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+373,351.jpg,41,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 374,3643.jpg,59,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
 375,3644.jpg,13,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
 376,3645.jpg,60,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
@@ -422,19 +422,19 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 420,4087.jpg,118,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
 421,4088.jpg,28,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
 422,4089.jpg,59,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
-423,4110.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-424,4111.jpg,24,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-425,4112.jpg,11,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-426,4113.jpg,37,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-427,4114.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-428,4115.jpg,8,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-429,4116.jpg,15,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-430,4118.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-431,4119.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-432,4120.jpg,46,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-433,4121.jpg,10,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-434,4122.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-435,4123.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
+423,4110.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+424,4111.jpg,24,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+425,4112.jpg,11,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+426,4113.jpg,37,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+427,4114.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+428,4115.jpg,8,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+429,4116.jpg,15,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+430,4118.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+431,4119.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+432,4120.jpg,46,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+433,4121.jpg,10,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+434,4122.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+435,4123.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
 436,4170.jpg,34,potato chips,test,"['potato chips', 'potato chip', 'crisps', 'thin, crunchy, golden slices']",0.01
 437,4173.jpg,11,potato chips,test,"['potato chips', 'potato chip', 'crisps', 'thin, crunchy, golden slices']",0.01
 438,4174.jpg,36,potato chips,test,"['potato chips', 'potato chip', 'crisps', 'thin, crunchy, golden slices']",0.01
@@ -487,65 +487,65 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 485,4500.jpg,8,skis,test_coco,"['skis', 'ski', 'long, flat objects', 'narrow, curved boards']",0.05
 486,4501.jpg,18,skis,test_coco,"['skis', 'ski', 'long, flat objects', 'narrow, curved boards']",0.05
 487,4502.jpg,21,skis,test_coco,"['skis', 'ski', 'long, flat objects', 'narrow, curved boards']",0.05
-488,4874.jpg,68,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-489,4875.jpg,40,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-490,4876.jpg,42,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-491,4877.jpg,44,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-492,4878.jpg,126,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-493,4879.jpg,76,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-494,4880.jpg,32,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-495,4881.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-496,4882.jpg,28,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-497,4883.jpg,15,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-498,4884.jpg,101,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-499,4885.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-500,4886.jpg,37,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-501,4887.jpg,32,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-502,4888.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-503,4889.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-504,4890.jpg,64,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-505,4891.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-506,4892.jpg,50,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-507,4893.jpg,28,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-508,4894.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-509,4895.jpg,8,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-510,4896.jpg,83,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-511,4897.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-512,4898.jpg,51,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-513,4900.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-514,4901.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-515,4903.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-516,4904.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-517,4905.jpg,250,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-518,4906.jpg,78,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-519,4908.jpg,24,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-520,4909.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-521,4910.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-522,4911.jpg,30,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-523,4912.jpg,39,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-524,4913.jpg,10,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-525,4915.jpg,87,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-526,4916.jpg,91,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-527,4917.jpg,37,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-528,4918.jpg,95,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-529,4919.jpg,31,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-530,4920.jpg,20,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-531,4921.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-532,4922.jpg,8,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-533,4923.jpg,31,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-534,4924.jpg,67,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-535,4925.jpg,142,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-536,4926.jpg,40,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-537,4927.jpg,63,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-538,4928.jpg,40,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-539,4929.jpg,36,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-540,4930.jpg,74,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-541,4931.jpg,58,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-542,4932.jpg,56,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-543,4933.jpg,54,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-544,4934.jpg,19,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-545,4935.jpg,9,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-546,4937.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+488,4874.jpg,68,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+489,4875.jpg,40,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+490,4876.jpg,42,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+491,4877.jpg,44,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+492,4878.jpg,126,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+493,4879.jpg,76,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+494,4880.jpg,32,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+495,4881.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+496,4882.jpg,28,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+497,4883.jpg,15,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+498,4884.jpg,101,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+499,4885.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+500,4886.jpg,37,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+501,4887.jpg,32,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+502,4888.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+503,4889.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+504,4890.jpg,64,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+505,4891.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+506,4892.jpg,50,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+507,4893.jpg,28,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+508,4894.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+509,4895.jpg,8,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+510,4896.jpg,83,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+511,4897.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+512,4898.jpg,51,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+513,4900.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+514,4901.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+515,4903.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+516,4904.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+517,4905.jpg,250,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+518,4906.jpg,78,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+519,4908.jpg,24,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+520,4909.jpg,16,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+521,4910.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+522,4911.jpg,30,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+523,4912.jpg,39,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+524,4913.jpg,10,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+525,4915.jpg,87,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+526,4916.jpg,91,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+527,4917.jpg,37,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+528,4918.jpg,95,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+529,4919.jpg,31,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+530,4920.jpg,20,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+531,4921.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+532,4922.jpg,8,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+533,4923.jpg,31,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+534,4924.jpg,67,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+535,4925.jpg,142,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+536,4926.jpg,40,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+537,4927.jpg,63,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+538,4928.jpg,40,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+539,4929.jpg,36,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+540,4930.jpg,74,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+541,4931.jpg,58,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+542,4932.jpg,56,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+543,4933.jpg,54,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+544,4934.jpg,19,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+545,4935.jpg,9,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+546,4937.jpg,11,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 547,4938.jpg,58,tree logs,test,"['tree logs', 'tree log', 'wood', 'large cylindrical pieces of wood']",0.03
 548,4939.jpg,20,tree logs,test,"['tree logs', 'tree log', 'wood', 'large cylindrical pieces of wood']",0.03
 549,4940.jpg,31,tree logs,test,"['tree logs', 'tree log', 'wood', 'large cylindrical pieces of wood']",0.03
@@ -604,22 +604,22 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 602,5371.jpg,44,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
 603,5372.jpg,31,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
 604,5373.jpg,40,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
-605,5374.jpg,16,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-606,5375.jpg,18,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-607,5376.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-608,5377.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-609,5378.jpg,11,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-610,5379.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-611,5380.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-612,5381.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-613,5382.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-614,5383.jpg,10,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-615,5385.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-616,5386.jpg,14,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-617,5387.jpg,8,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-618,5388.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-619,5390.jpg,14,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-620,5391.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
+605,5374.jpg,16,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+606,5375.jpg,18,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+607,5376.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+608,5377.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+609,5378.jpg,11,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+610,5379.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+611,5380.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+612,5381.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+613,5382.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+614,5383.jpg,10,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+615,5385.jpg,9,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+616,5386.jpg,14,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+617,5387.jpg,8,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+618,5388.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+619,5390.jpg,14,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+620,5391.jpg,12,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
 621,5458.jpg,25,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 622,5459.jpg,72,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 623,5460.jpg,131,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
@@ -638,13 +638,13 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 636,5512.jpg,72,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 637,5513.jpg,89,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
 638,5514.jpg,112,green peas,test,"['green peas', 'green pea', 'small, round green vegetables', 'tiny spherical seeds with smooth surfaces']",0.01
-639,5562.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-640,5563.jpg,189,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-641,5564.jpg,16,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-642,5565.jpg,8,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-643,5566.jpg,33,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-644,5567.jpg,51,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
-645,5568.jpg,30,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.01
+639,5562.jpg,13,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+640,5563.jpg,189,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+641,5564.jpg,16,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+642,5565.jpg,8,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+643,5566.jpg,33,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+644,5567.jpg,51,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
+645,5568.jpg,30,finger foods,test,"['finger foods', 'finger food', 'snack items', 'small food items on a platter']",0.05
 646,5571.jpg,20,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
 647,5572.jpg,9,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
 648,5573.jpg,26,marbles,test,"['marbles', 'marble', 'glass beads', 'small, round objects with smooth, glossy surfaces']",0.01
@@ -694,53 +694,53 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 692,5807.jpg,110,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
 693,5808.jpg,53,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
 694,5809.jpg,26,cashew nuts,test,"['cashew nuts', 'cashew nut', 'kernels', 'beige, curved, crescent-shaped nuts']",0.03
-695,5810.jpg,90,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-696,5811.jpg,37,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-697,5812.jpg,51,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-698,5813.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-699,5814.jpg,34,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-700,5815.jpg,146,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-701,5816.jpg,101,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-702,5817.jpg,41,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-703,5818.jpg,56,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-704,5819.jpg,9,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-705,5820.jpg,23,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-706,5821.jpg,96,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-707,5822.jpg,128,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-708,5823.jpg,69,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-709,5824.jpg,24,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-710,5825.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-711,5826.jpg,47,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-712,5827.jpg,56,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-713,5828.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-714,5829.jpg,165,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-715,5830.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-716,5831.jpg,101,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-717,5832.jpg,122,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-718,5833.jpg,92,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-719,5834.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-720,5835.jpg,79,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-721,5836.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-722,5837.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-723,5838.jpg,113,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-724,5839.jpg,45,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-725,5840.jpg,111,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-726,5841.jpg,51,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-727,5842.jpg,52,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-728,5843.jpg,74,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-729,5844.jpg,75,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-730,5845.jpg,57,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-731,5846.jpg,34,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-732,5847.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-733,5848.jpg,21,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-734,5849.jpg,38,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-735,5850.jpg,9,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-736,5851.jpg,43,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-737,5852.jpg,42,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-738,5853.jpg,95,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-739,5854.jpg,25,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-740,5855.jpg,135,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
-741,5856.jpg,78,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.03
+695,5810.jpg,90,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+696,5811.jpg,37,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+697,5812.jpg,51,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+698,5813.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+699,5814.jpg,34,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+700,5815.jpg,146,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+701,5816.jpg,101,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+702,5817.jpg,41,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+703,5818.jpg,56,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+704,5819.jpg,9,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+705,5820.jpg,23,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+706,5821.jpg,96,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+707,5822.jpg,128,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+708,5823.jpg,69,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+709,5824.jpg,24,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+710,5825.jpg,14,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+711,5826.jpg,47,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+712,5827.jpg,56,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+713,5828.jpg,12,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+714,5829.jpg,165,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+715,5830.jpg,35,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+716,5831.jpg,101,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+717,5832.jpg,122,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+718,5833.jpg,92,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+719,5834.jpg,27,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+720,5835.jpg,79,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+721,5836.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+722,5837.jpg,18,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+723,5838.jpg,113,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+724,5839.jpg,45,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+725,5840.jpg,111,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+726,5841.jpg,51,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+727,5842.jpg,52,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+728,5843.jpg,74,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+729,5844.jpg,75,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+730,5845.jpg,57,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+731,5846.jpg,34,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+732,5847.jpg,13,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+733,5848.jpg,21,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+734,5849.jpg,38,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+735,5850.jpg,9,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+736,5851.jpg,43,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+737,5852.jpg,42,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+738,5853.jpg,95,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+739,5854.jpg,25,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+740,5855.jpg,135,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
+741,5856.jpg,78,strawberries,test,"['strawberries', 'strawberry', 'berries', 'small, red fruits with tiny seeds on the surface']",0.05
 742,5915.jpg,12,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 743,5916.jpg,38,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 744,5917.jpg,12,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
@@ -772,7 +772,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 770,5943.jpg,48,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 771,5944.jpg,15,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 772,6.jpg,9,hot air balloons,test,"['hot air balloons', 'hot air balloon', 'large, rounded objects with a basket underneath', 'aerial vessels with colorful fabric envelopes']",0.03
-773,6042.jpg,12,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+773,6042.jpg,12,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 774,6043.jpg,102,keyboard keys,test,"['keyboard keys', 'keyboard key', 'keys', 'small, white rectangular objects', 'small, black rectangular objects']",0.01
 775,6044.jpg,86,keyboard keys,test,"['keyboard keys', 'keyboard key', 'keys', 'small, white rectangular objects', 'small, black rectangular objects']",0.01
 776,6045.jpg,42,keyboard keys,test,"['keyboard keys', 'keyboard key', 'keys', 'small, white rectangular objects', 'small, black rectangular objects']",0.01
@@ -857,7 +857,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 855,6710.jpg,121,sticky notes,test,"['sticky notes', 'sticky note', 'post-it notes', 'small, yellow or pink pieces of paper']",0.03
 856,6711.jpg,72,markers,test,"['markers', 'highlighters', 'cylindrical objects with a felt tip', 'colorful plastic-bodied pens']",0.01
 857,6713.jpg,190,sheep,test_coco,"['sheep', 'goat', 'fluffy white wool animal', 'soft, textured fur animal']",0.03
-858,6715.jpg,36,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+858,6715.jpg,36,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 859,6732.jpg,39,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 860,6733.jpg,24,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 861,6735.jpg,73,markers,test,"['markers', 'highlighters', 'cylindrical objects with a felt tip', 'colorful plastic-bodied pens']",0.01
@@ -871,7 +871,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 869,6771.jpg,25,sauce bottles,test,"['sauce bottles', 'sauce bottle', 'bottle', 'small container with a narrow neck']",0.03
 870,6785.jpg,45,sunglasses,test,"['sunglasses', 'eyeglasses', 'eyewear', 'curved objects with dark lenses']",0.05
 871,6788.jpg,211,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
-872,680.jpg,12,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+872,680.jpg,12,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 873,6803.jpg,48,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
 874,6804.jpg,12,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 875,6809.jpg,140,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
@@ -905,7 +905,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 903,6876.jpg,58,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 904,6879.jpg,16,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 905,689.jpg,63,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
-906,6892.jpg,54,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+906,6892.jpg,54,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 907,6893.jpg,81,sheep,test_coco,"['sheep', 'goat', 'fluffy white wool animal', 'soft, textured fur animal']",0.03
 908,6898.jpg,221,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
 909,6901.jpg,38,sheep,test_coco,"['sheep', 'goat', 'fluffy white wool animal', 'soft, textured fur animal']",0.03
@@ -917,7 +917,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 915,692.jpg,11,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
 916,6920.jpg,44,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
 917,6922.jpg,70,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
-918,6923.jpg,28,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+918,6923.jpg,28,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 919,6928.jpg,30,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 920,693.jpg,17,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
 921,6935.jpg,60,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
@@ -940,7 +940,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 938,698.jpg,154,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
 939,6980.jpg,38,elephants,test_coco,"['elephants', 'elephant', 'mammoths', 'large animals with trunks', 'bulky animals with gray skin and tusks']",0.1
 940,6985.jpg,143,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
-941,6986.jpg,32,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+941,6986.jpg,32,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 942,6990.jpg,45,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
 943,6993.jpg,90,sunglasses,test,"['sunglasses', 'eyeglasses', 'eyewear', 'curved objects with dark lenses']",0.05
 944,6994.jpg,272,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
@@ -1005,7 +1005,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 1003,715.jpg,21,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
 1004,7153.jpg,18,deers,test,"['deers', 'deer', 'bucks', 'animals with slender legs and antlers', 'animals with brown, short fur']",0.03
 1005,716.jpg,182,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
-1006,7161.jpg,36,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1006,7161.jpg,36,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1007,7167.jpg,217,markers,test,"['markers', 'highlighters', 'cylindrical objects with a felt tip', 'colorful plastic-bodied pens']",0.01
 1008,717.jpg,20,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
 1009,7171.jpg,13,legos,test,"['legos', 'lego', 'lego studs', 'lego bricks', 'small, interlocking plastic pieces']",0.01
@@ -1022,18 +1022,18 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 1020,7201.jpg,211,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
 1021,7205.jpg,113,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 1022,7206.jpg,83,keyboard keys,test,"['keyboard keys', 'keyboard key', 'keys', 'small, white rectangular objects', 'small, black rectangular objects']",0.01
-1023,7216.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1023,7216.jpg,25,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1024,7219.jpg,51,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
 1025,7221.jpg,60,sunglasses,test,"['sunglasses', 'eyeglasses', 'eyewear', 'curved objects with dark lenses']",0.05
-1026,7222.jpg,49,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1026,7222.jpg,49,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1027,7239.jpg,180,sheep,test_coco,"['sheep', 'goat', 'fluffy white wool animal', 'soft, textured fur animal']",0.03
 1028,7240.jpg,49,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 1029,7248.jpg,22,deers,test,"['deers', 'deer', 'bucks', 'animals with slender legs and antlers', 'animals with brown, short fur']",0.03
 1030,7251.jpg,117,sheep,test_coco,"['sheep', 'goat', 'fluffy white wool animal', 'soft, textured fur animal']",0.03
 1031,7253.jpg,47,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
 1032,7262.jpg,21,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03
-1033,7263.jpg,43,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
-1034,7273.jpg,32,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1033,7263.jpg,43,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
+1034,7273.jpg,32,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1035,7277.jpg,26,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 1036,7278.jpg,72,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
 1037,7281.jpg,75,sheep,test_coco,"['sheep', 'goat', 'fluffy white wool animal', 'soft, textured fur animal']",0.03
@@ -1048,12 +1048,12 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 1046,7329.jpg,144,sunglasses,test,"['sunglasses', 'eyeglasses', 'eyewear', 'curved objects with dark lenses']",0.05
 1047,7339.jpg,104,markers,test,"['markers', 'highlighters', 'cylindrical objects with a felt tip', 'colorful plastic-bodied pens']",0.01
 1048,7341.jpg,17,sauce bottles,test,"['sauce bottles', 'sauce bottle', 'bottle', 'small container with a narrow neck']",0.03
-1049,7342.jpg,55,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1049,7342.jpg,55,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1050,7345.jpg,78,keyboard keys,test,"['keyboard keys', 'keyboard key', 'keys', 'small, white rectangular objects', 'small, black rectangular objects']",0.01
 1051,7347.jpg,103,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
 1052,7359.jpg,42,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
 1053,7361.jpg,23,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
-1054,7365.jpg,56,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1054,7365.jpg,56,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1055,7366.jpg,44,sheep,test_coco,"['sheep', 'goat', 'fluffy white wool animal', 'soft, textured fur animal']",0.03
 1056,7370.jpg,11,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 1057,7378.jpg,256,legos,test,"['legos', 'lego', 'lego studs', 'lego bricks', 'small, interlocking plastic pieces']",0.01
@@ -1067,7 +1067,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 1065,7410.jpg,44,nail polish,test,"['nail polish', 'nail varnish', 'polish bottle', 'small bottles with colorful liquid']",0.03
 1066,7411.jpg,233,markers,test,"['markers', 'highlighters', 'cylindrical objects with a felt tip', 'colorful plastic-bodied pens']",0.01
 1067,7412.jpg,36,sheep,test_coco,"['sheep', 'goat', 'fluffy white wool animal', 'soft, textured fur animal']",0.03
-1068,7417.jpg,43,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1068,7417.jpg,43,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1069,7420.jpg,21,deers,test,"['deers', 'deer', 'bucks', 'animals with slender legs and antlers', 'animals with brown, short fur']",0.03
 1070,7424.jpg,145,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 1071,7426.jpg,253,sunglasses,test,"['sunglasses', 'eyeglasses', 'eyewear', 'curved objects with dark lenses']",0.05
@@ -1075,7 +1075,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 1073,7440.jpg,32,legos,test,"['legos', 'lego', 'lego studs', 'lego bricks', 'small, interlocking plastic pieces']",0.01
 1074,7442.jpg,120,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
 1075,7443.jpg,292,markers,test,"['markers', 'highlighters', 'cylindrical objects with a felt tip', 'colorful plastic-bodied pens']",0.01
-1076,7449.jpg,60,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1076,7449.jpg,60,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1077,7452.jpg,85,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 1078,7455.jpg,73,sunglasses,test,"['sunglasses', 'eyeglasses', 'eyewear', 'curved objects with dark lenses']",0.05
 1079,7459.jpg,11,elephants,test_coco,"['elephants', 'elephant', 'mammoths', 'large animals with trunks', 'bulky animals with gray skin and tusks']",0.1
@@ -1115,9 +1115,9 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 1113,7547.jpg,19,elephants,test_coco,"['elephants', 'elephant', 'mammoths', 'large animals with trunks', 'bulky animals with gray skin and tusks']",0.1
 1114,7550.jpg,20,elephants,test_coco,"['elephants', 'elephant', 'mammoths', 'large animals with trunks', 'bulky animals with gray skin and tusks']",0.1
 1115,7554.jpg,71,markers,test,"['markers', 'highlighters', 'cylindrical objects with a felt tip', 'colorful plastic-bodied pens']",0.01
-1116,7555.jpg,31,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1116,7555.jpg,31,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1117,7557.jpg,21,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
-1118,7564.jpg,52,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1118,7564.jpg,52,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1119,7565.jpg,113,sticky notes,test,"['sticky notes', 'sticky note', 'post-it notes', 'small, yellow or pink pieces of paper']",0.03
 1120,7567.jpg,68,sauce bottles,test,"['sauce bottles', 'sauce bottle', 'bottle', 'small container with a narrow neck']",0.03
 1121,7573.jpg,18,carrom board pieces,test,"['carrom board pieces', 'carrom pieces', 'small round objects used in carrom games', 'smooth, flat pieces made of wood or plastic']",0.03
@@ -1158,7 +1158,7 @@ Unnamed: 0,filename,n_objects,class,split,optimized_prompts,threshold
 1156,7679.jpg,10,deers,test,"['deers', 'deer', 'bucks', 'animals with slender legs and antlers', 'animals with brown, short fur']",0.03
 1157,7682.jpg,24,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 1158,7683.jpg,35,comic books,test,"['comic books', 'comic book', 'illustrated books', 'rectangular objects with colorful covers']",0.03
-1159,7687.jpg,20,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.01
+1159,7687.jpg,20,stamps,test,"['stamps', 'stamp', 'emblems', 'small paper squaresyellow or pink paper squares']",0.05
 1160,7688.jpg,32,watches,test,"['watches', 'watch', 'timepieces', 'clock', 'round or rectangular objects']",0.05
 1161,7689.jpg,12,eggs,test,"['eggs', 'egg', 'oval-shaped objects', 'hard shell objects']",0.05
 1162,7693.jpg,81,apples,test_coco,"['apples', 'apple', 'fruit', 'round objects with smooth, glossy skin', 'red, green, or yellow fruits']",0.03

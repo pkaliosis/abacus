@@ -6,6 +6,7 @@ import torchvision
 import numpy as np
 import pandas as pd
 from PIL import Image
+from tqdm import tqdm
 from typing import List, Dict, Any, Optional, Union, Tuple
 from transformers import pipeline
 
@@ -31,7 +32,7 @@ class ObjectDetector:
         Save the areas of the bounding boxes as separate .jpg files with improved resolution.
         """
         # Set device to GPU if available
-        device = "cuda:3" if torch.cuda.is_available() else "cpu"
+        device = "cuda:5" if torch.cuda.is_available() else "cpu"
 
         # Set the object detection model ID
         detector_id = detector_id if detector_id is not None else "IDEA-Research/grounding-dino-tiny"
@@ -67,9 +68,9 @@ class ObjectDetector:
     def main(self):
         df = pd.read_csv(self.df_path)
 
-        test_img_path = "../../../../data/add_disk0/panos/datasets/FSC147_384_V2/images/test/"
+        test_img_path = "../../../../data/add_disk1/panos/datasets/FSC147_384_V2/images/test/"
         
-        test_df = df[df["split"] == "test_coco"]
+        test_df = df[df["split"].isin(["test", "test_coco"])]
         # Apply the function to create the new column
         #test_df['det_t'] = test_df['n_objects'].apply(decide_threshold)
         df['optimized_prompts'] = df['optimized_prompts'].apply(lambda x: str(x))
@@ -78,7 +79,7 @@ class ObjectDetector:
 
         detector_id = "IDEA-Research/grounding-dino-base"
 
-        for _, row in test_df.iterrows():
+        for _, row in tqdm(test_df.iterrows()):
 
             img = Image.open(test_img_path + row["filename"])
 
@@ -95,11 +96,11 @@ class ObjectDetector:
             bbs_idxs = big_box_suppress(nms_boxes)
             bbs_boxes = [nms_boxes[i] for i in range(len(nms_boxes)) if not bbs_idxs.logical_not()[i]]
 
-            save_bboxes(img, bbs_boxes, "../outputs/bboxes/" + row["filename"][:-4] + "/")
+            save_bboxes(img, bbs_boxes, "../../../../data/add_disk1/panos/abacus/bboxes/" + row["filename"][:-4] + "/")
 
 
 
 if __name__ == "__main__":
-    detector = ObjectDetector("../data/FSC147_384_V2/annotations/abacus_v1.csv")
+    detector = ObjectDetector("../data/FSC147_384_V2/annotations/abacus_v3.csv")
     detector.main()
 
