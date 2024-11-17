@@ -73,7 +73,6 @@ def save_bboxes(
 
         # Process the detected bounding boxes and save the cropped areas
         for i, result in enumerate(results):
-            print(result)
             # Get bounding box coordinates
             box = result["box"]  # Expected to be a dict with "xmin", "ymin", "xmax", "ymax"
 
@@ -94,7 +93,7 @@ def save_bboxes(
             output_path = os.path.join(output_dir, f"detected_object_{i + 1}.png")
             cropped_image.save(output_path, "PNG", optimizer=True)
 
-        print(f"Saved {len(results)} detected objects to {output_dir}")
+        print(f"Saved {len(results)} detected objects to {output_dir}\n")
 
 def plot_bboxes(
     image: Image.Image,
