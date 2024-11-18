@@ -11,7 +11,7 @@ from typing import List, Dict, Any, Optional, Union, Tuple
 from transformers import pipeline
 
 sys.path.append("../")
-from utils.utils import load_image, decide_threshold, nms, big_box_suppress, save_bboxes
+from utils.utils import load_image, nms, big_box_suppress, save_bboxes
 from utils.detection_result import DetectionResult
 
 class ObjectDetector:
@@ -101,6 +101,6 @@ class ObjectDetector:
 
 
 if __name__ == "__main__":
-    detector = ObjectDetector("../data/FSC147_384_V2/annotations/abacus_v3.csv")
+    detector = ObjectDetector("../data/FSC147_384_V2/annotations/abacus_v5.csv")
     detector.main()
 

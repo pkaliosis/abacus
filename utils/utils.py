@@ -91,9 +91,8 @@ def save_bboxes(
 
         # Ensure output directory exists
         os.makedirs(output_dir, exist_ok=True)
-
-        # Convert the PIL image to a NumPy array for manipulation
-        image_np = np.array(image)
+        prototype_dir = os.path.join(output_dir, "prototypes")
+        os.makedirs(prototype_dir, exist_ok=True)
 
         # Process the detected bounding boxes and save the cropped areas
         for i, result in enumerate(results):
@@ -116,6 +115,11 @@ def save_bboxes(
             # Save the upscaled cropped image as a .jpg file
             output_path = os.path.join(output_dir, f"detected_object_{i + 1}.png")
             cropped_image.save(output_path, "PNG", optimizer=True)
+
+            # Additionally save the first three detections in the "prototypes" folder
+            if i < 3:
+                prototype_output_path = os.path.join(prototype_dir, f"prototype_object_{i + 1}.png")
+                cropped_image.save(prototype_output_path, "PNG", optimizer=True)
 
         print(f"Saved {len(results)} detected objects to {output_dir}\n")
 
