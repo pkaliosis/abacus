@@ -2,12 +2,36 @@ import os
 import torch
 import torchvision
 import requests
+import logging
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 from typing import List, Dict, Any, Optional
 
 from .detection_result import DetectionResult
+
+def set_logger(log_path, file_name, print_on_screen):
+    """
+    Write logs to checkpoint and console
+    """
+
+    log_file = os.path.join(log_path, file_name)
+
+    logging.basicConfig(
+        format="[%(asctime)s][%(filename)s][line:%(lineno)d][%(levelname)s] %(message)s",
+        level=logging.INFO,
+        datefmt="%Y-%m-%d %H:%M:%S",
+        filename=log_file,
+        filemode="w",
+    )
+    if print_on_screen:
+        console = logging.StreamHandler()
+        console.setLevel(logging.INFO)
+        formatter = logging.Formatter(
+            "[%(asctime)s][%(filename)s][line:%(lineno)d][%(levelname)s] %(message)s"
+        )
+        console.setFormatter(formatter)
+        logging.getLogger("").addHandler(console)
 
 def load_image(image_str: str) -> Image.Image:
     if image_str.startswith("http"):

@@ -1,48 +1,56 @@
+import os
 import numpy as np
 import pandas as pd
-
-import transformers
 from transformers import AutoProcessor, LlavaForConditionalGeneration
 import torch
 from torch.utils.data import Dataset, DataLoader
-import os
 import sys
-import cv2
+import json
+import logging
 from tqdm import tqdm
-
 from PIL import Image
-import requests
+import argparse
 
 sys.path.append("../")
+from utils.utils import set_logger
 from utils.evaluation import mae, rmse
 from utils.dataset import ZSOCDataset
 
 #os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 class VLMQueryExecutor:
-    def __init__(self, vlm_path, df_path):
-        self.vlm_path = vlm_path
-        self.df_path = df_path
+    def __init__(self, config_path):
+        # Load configurations from a JSON file
+        self.config = self.load_config(config_path)
+
+        n_gpu = self.config.get('n_gpu', 1)
+        self.device = f"cuda:{str(self.config['cuda_nr'])}" if n_gpu > 0 else "cpu"
+
+        set_logger("../snapshots/logs/", "train.log", self.config["logging"]["print_on_screen"])
+
+    def load_config(self, config_path):
+        """ Load all arguments from a JSON configuration file """
+        with open(config_path, 'r') as f:
+            config = json.load(f)
+        
+        return config
         
         
     def main(self):
         
-        df = pd.read_csv(self.df_path)
+        df = pd.read_csv(self.config["df_path"])
         
-        object_imgs_path = "../outputs/bboxes/"
+        object_imgs_path = self.config["bboxes_path"]
         
         #test_df = df[df["split"] == "test"]
         test_df = df
         test_df["predicted_counts"] = None
 
-    
-        print(test_df.head())
+        logging.info("Initializing model...")
+        model = LlavaForConditionalGeneration.from_pretrained(self.config["pretrained_vlm_hf_id"]).half().to(self.device)
+        processor = AutoProcessor.from_pretrained(self.config["pretrained_vlm_hf_id"], use_fast=False)
         
-        device = "cuda" if torch.cuda.is_available() else "cpu"
-
-        model = LlavaForConditionalGeneration.from_pretrained(self.vlm_path).half().to("cuda")
-        processor = AutoProcessor.from_pretrained(self.vlm_path, use_fast=False)
-        
+        logging.info("Start iterating...")
         for idx, row in tqdm(test_df.iterrows()):
             
             dataset = ZSOCDataset(
@@ -50,14 +58,16 @@ class VLMQueryExecutor:
                 obj_id = row["filename"][:-4],
                 obj_class = row["class"],
                 obj_prompt_notation = row["prompt_notation"],
-                obj_description = row["description"],
+                #obj_description = row["description"],
+                prompt_template = self.config["prompt_template"]
             )
             
             dataloader = DataLoader(
                 dataset,
-                batch_size=4,
-                num_workers=4
+                batch_size=self.config["dataloader_params"]["batch_size"],
+                num_workers=self.config["dataloader_params"]["num_workers"]
             )
+
             counter = 0
             for batch in tqdm(dataloader):
                 
@@ -66,10 +76,10 @@ class VLMQueryExecutor:
                 
                 images = [Image.open(path) for path in img_paths]
                 
-                inputs = processor(text=prompts, images=images, return_tensors="pt").to("cuda")
+                inputs = processor(text=prompts, images=images, return_tensors="pt").to(self.device)
                 
                 # Generate
-                generate_ids = model.generate(**inputs, max_new_tokens=200)
+                generate_ids = model.generate(**inputs, max_new_tokens=self.config["generation_params"]["max_length"])
                 texts = processor.batch_decode(
                     generate_ids,
                     skip_special_tokens=True,
@@ -80,11 +90,21 @@ class VLMQueryExecutor:
                     counter += ("yes" in answer.lower())
             
             test_df.loc[idx, "predicted_counts"] = counter
+
+            if (idx%3 == 0):
+                r_mae, r_rmse = mae(test_df.head(idx)["n_objects"], test_df.head(idx)["predicted_counts"]), rmse(test_df.head(idx)["n_objects"], test_df.head(idx)["predicted_counts"])
+                if not os.path.exists(os.path.dirname(self.config["output_path"])):
+                    os.makedirs(os.path.dirname(self.config["output_path"]))  # Create any missing directories
+                    logging.info(f"Created directories: {os.path.dirname(self.config['output_path'])}")
+                test_df.to_csv(self.config["output_path"])
+                logging.info(f"MAE@{idx}: {r_mae}")
+                logging.info(f"RMSE@{idx}: {r_rmse}")
+                logging.info(f"Saved ongoing results at {self.config['output_path']}")
         
-        test_df.drop("description", axis=1, inplace=True)
-        test_df.to_csv('../outputs/dfs/test_df_not_coco_only.csv')
+        test_df.drop("optimized_prompts", axis=1, inplace=True)
+        test_df.to_csv(self.config["output_path"])
         
-        # Evaluation
+        # Final evaluation
         mae_ = mae(test_df["n_objects"], test_df["predicted_counts"])
         rmse_ = rmse(test_df["n_objects"], test_df["predicted_counts"])
         
@@ -93,5 +113,10 @@ class VLMQueryExecutor:
         
 
 if __name__ == "__main__":
-    vlm_query_exec = VLMQueryExecutor("llava-hf/llava-1.5-7b-hf", "../data/FSC147_384_V2/annotations/desc_annotations_with_coco_2.csv")
+
+    parser = argparse.ArgumentParser(description="Script to run InstructBLIP with JSON config.")
+    parser.add_argument('--config', type=str, required=False, default="../configs/vlm_config.json", help='Path to the JSON configuration file.')
+    args = parser.parse_args()
+
+    vlm_query_exec = VLMQueryExecutor(args.config)
     vlm_query_exec.main()

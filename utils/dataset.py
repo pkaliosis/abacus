@@ -10,16 +10,19 @@ class ZSOCDataset(Dataset):
                  obj_id,
                  obj_class,
                  obj_prompt_notation,
-                 obj_description
+                 #obj_description,
+                 prompt_template
         ):
         
         self.image_folder = str(image_folder),
         self.obj_id = obj_id,
         self.obj_class = obj_class,
         self.obj_prompt_notation = obj_prompt_notation,
-        self.obj_description = obj_description
+        #self.obj_description = obj_description
+        self.prompt = prompt_template.format(obj_prompt_notation=self.obj_prompt_notation[0])
+        print("PROMPT:", self.prompt)
         
-        self.prompt = f"USER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
+        #self.prompt = f"USER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
 
         self.images = [path for path in os.listdir(image_folder)]
 

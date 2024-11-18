@@ -1,0 +1,21 @@
+{
+    "n_gpu": 1,
+    "cuda_nr": 5,
+    "seed": 42,
+    "pretrained_vlm_hf_id": "llava-hf/llava-1.5-7b-hf",
+    "df_path": "../data/FSC147_384_V2/annotations/abacus_v4.csv",
+    "bboxes_path": "../../../../data/add_disk1/panos/abacus/bboxes/",
+    "output_path": "../outputs/dfs/abacus_results_vanilla.csv",
+    "prompt_template": "USER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:",
+    "logging":  {
+        "print_on_screen": true
+        },
+    "dataloader_params": {
+        "batch_size": 4,
+        "num_workers": 8
+    },
+    "generation_params":  {
+        "max_length": 50
+        },
+    "prompting_strategy": "icl"
+}
