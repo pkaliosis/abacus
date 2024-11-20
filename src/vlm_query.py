@@ -58,8 +58,9 @@ class VLMQueryExecutor:
                 obj_id = row["filename"][:-4],
                 obj_class = row["class"],
                 obj_prompt_notation = row["prompt_notation"],
-                #obj_description = row["description"],
-                prompt_template = self.config["prompt_template"]
+                obj_description = row["generated_description"],
+                prompt_template = self.config["prompt_template"],
+                #prototypes_folder = object_imgs_path  + row["filename"][:-4] + "/prototypes"
             )
             
             dataloader = DataLoader(
@@ -71,12 +72,14 @@ class VLMQueryExecutor:
             counter = 0
             for batch in tqdm(dataloader):
                 
-                img_paths = batch["img_paths"]
-                prompts = batch["prompts"]
-                
-                images = [Image.open(path) for path in img_paths]
-                
-                inputs = processor(text=prompts, images=images, return_tensors="pt").to(self.device)
+                images = [Image.open(path) for path in batch["img_paths"]]
+                #prototypes = [Image.open(path) for path in batch["prototype_path"]]
+                #inp_images = [item for pair in zip([prototypes[0]] * len(images), images) for item in pair]
+                scale_factor = 4
+                upsampled_images = [image.resize(
+                                    (int(image.width * scale_factor), int(image.height * scale_factor)), Image.BICUBIC
+                                ) for image in images]
+                inputs = processor(text=batch["prompts"], images=upsampled_images, return_tensors="pt").to(self.device)
                 
                 # Generate
                 generate_ids = model.generate(**inputs, max_new_tokens=self.config["generation_params"]["max_length"])

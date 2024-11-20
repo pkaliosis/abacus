@@ -23,7 +23,8 @@ class ZSOCDataset(Dataset):
         #self.prompt = prompt_template.format(obj_prompt_notation=self.obj_prompt_notation[0])
         #self.prototypes_folder= prototypes_folder
         
-        self.prompt = f"USER: How does {obj_prompt_notation} look like?\n ASSISTANT: {self.obj_description}.\n USER: <image> Does this image show {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
+        #self.prompt = f"USER: How does {obj_prompt_notation} look like?\n ASSISTANT: {self.obj_description}.\n USER: <image> Does this image show {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
+        self.prompt = f"USER: <image> Does this image show {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
         print("PROMPT:", self.prompt)
 
         self.images = [path for path in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, path))]
