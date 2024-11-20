@@ -10,7 +10,9 @@ class ZSOCDataset(Dataset):
                  obj_id,
                  obj_class,
                  obj_prompt_notation,
-                 obj_description
+                 obj_description,
+                 prompt_template,
+                 #prototypes_folder
         ):
         
         self.image_folder = str(image_folder),
@@ -18,38 +20,21 @@ class ZSOCDataset(Dataset):
         self.obj_class = obj_class,
         self.obj_prompt_notation = obj_prompt_notation,
         self.obj_description = obj_description
+        #self.prompt = prompt_template.format(obj_prompt_notation=self.obj_prompt_notation[0])
+        #self.prototypes_folder= prototypes_folder
         
-        self.prompt = f"USER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
+        #self.prompt = f"USER: How does {obj_prompt_notation} look like?\n ASSISTANT: {self.obj_description}.\n USER: <image> Does this image show {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
+        self.prompt = f"USER: <image> Does this image show {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
+        print("PROMPT:", self.prompt)
 
-        self.images = [path for path in os.listdir(image_folder)]
+        self.images = [path for path in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, path))]
+        #self.prototypes = [path for path in os.listdir(self.prototypes_folder)]
 
     def __len__(self):
-        return len(os.listdir(self.image_folder[0]))
+        return len(self.images)
 
     def __getitem__(self, idx):
         img_paths = self.image_folder[0] + "/" + self.images[idx]
-        return {"img_paths": img_paths, "prompts": self.prompt}
-    
-        """
-            conversation = [
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": f"How does {obj_prompt_notation} look like?"},
-                        ],
-                },
-                {
-                    "role": "assistant",
-                    "content": [{"type": "text", "text": f"{obj_description}"},]
-                },
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "image"},
-                        {"type": "text", "text": f"Is this {obj_prompt_notation}? Please answer with a yes or a no."},
-                        ],
-                },
-            ]
-
-            text_prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
-        """
+        #prototype_path = self.prototypes_folder + "/" + self.prototypes[1]
+        return {"img_paths": img_paths, "prompts": self.prompt}#, "prototype_path": prototype_path}
+        

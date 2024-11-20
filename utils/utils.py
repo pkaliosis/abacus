@@ -2,12 +2,36 @@ import os
 import torch
 import torchvision
 import requests
+import logging
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 from typing import List, Dict, Any, Optional
 
 from .detection_result import DetectionResult
+
+def set_logger(log_path, file_name, print_on_screen):
+    """
+    Write logs to checkpoint and console
+    """
+
+    log_file = os.path.join(log_path, file_name)
+
+    logging.basicConfig(
+        format="[%(asctime)s][%(filename)s][line:%(lineno)d][%(levelname)s] %(message)s",
+        level=logging.INFO,
+        datefmt="%Y-%m-%d %H:%M:%S",
+        filename=log_file,
+        filemode="w",
+    )
+    if print_on_screen:
+        console = logging.StreamHandler()
+        console.setLevel(logging.INFO)
+        formatter = logging.Formatter(
+            "[%(asctime)s][%(filename)s][line:%(lineno)d][%(levelname)s] %(message)s"
+        )
+        console.setFormatter(formatter)
+        logging.getLogger("").addHandler(console)
 
 def load_image(image_str: str) -> Image.Image:
     if image_str.startswith("http"):
@@ -67,13 +91,11 @@ def save_bboxes(
 
         # Ensure output directory exists
         os.makedirs(output_dir, exist_ok=True)
-
-        # Convert the PIL image to a NumPy array for manipulation
-        image_np = np.array(image)
+        prototype_dir = os.path.join(output_dir, "prototypes")
+        os.makedirs(prototype_dir, exist_ok=True)
 
         # Process the detected bounding boxes and save the cropped areas
         for i, result in enumerate(results):
-            print(result)
             # Get bounding box coordinates
             box = result["box"]  # Expected to be a dict with "xmin", "ymin", "xmax", "ymax"
 
@@ -94,7 +116,12 @@ def save_bboxes(
             output_path = os.path.join(output_dir, f"detected_object_{i + 1}.png")
             cropped_image.save(output_path, "PNG", optimizer=True)
 
-        print(f"Saved {len(results)} detected objects to {output_dir}")
+            # Additionally save the first three detections in the "prototypes" folder
+            if i < 3:
+                prototype_output_path = os.path.join(prototype_dir, f"prototype_object_{i + 1}.png")
+                cropped_image.save(prototype_output_path, "PNG", optimizer=True)
+
+        print(f"Saved {len(results)} detected objects to {output_dir}\n")
 
 def plot_bboxes(
     image: Image.Image,

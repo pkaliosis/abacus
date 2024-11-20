@@ -25,12 +25,14 @@ nvidia-nvtx-cu12==12.1.105
 packaging==24.1
 pandas==2.2.3
 pillow==10.4.0
+protobuf==5.28.3
 python-dateutil==2.9.0.post0
 pytz==2024.2
 PyYAML==6.0.2
 regex==2024.9.11
 requests==2.32.3
 safetensors==0.4.5
+sentencepiece==0.2.0
 six==1.16.0
 sympy==1.13.3
 tokenizers==0.19.1
