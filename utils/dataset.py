@@ -11,19 +11,17 @@ class ZSOCDataset(Dataset):
                  obj_class,
                  obj_prompt_notation,
                  obj_description,
-                 prompt_template,
-                 #prototypes_folder
+                 prototypes_folder
         ):
-        
-        self.image_folder = str(image_folder),
-        self.obj_id = obj_id,
-        self.obj_class = obj_class,
-        self.obj_prompt_notation = obj_prompt_notation,
+        self.image_folder = str(image_folder)
+        self.obj_id = obj_id
+        self.obj_class = obj_class
+        self.obj_prompt_notation = obj_prompt_notation
         self.obj_description = obj_description
         #self.prompt = prompt_template.format(obj_prompt_notation=self.obj_prompt_notation[0])
-        #self.prototypes_folder= prototypes_folder
+        #self.prototypes_folder = prototypes_folder
         
-        #self.prompt = f"USER: How does {obj_prompt_notation} look like?\n ASSISTANT: {self.obj_description}.\n USER: <image> Does this image show {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
+            #self.prompt = f"USER: How does {obj_prompt_notation} look like?\n ASSISTANT: {self.obj_description}.\n USER: <image> Does this image show {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
         self.prompt = f"USER: <image> Does this image show {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:"
         print("PROMPT:", self.prompt)
 
