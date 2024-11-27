@@ -10,7 +10,6 @@ from transformers import AutoProcessor, LlavaForConditionalGeneration, AutoModel
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 from PIL import Image
-from open_flamingo import create_model_and_transforms
 from huggingface_hub import hf_hub_download
 
 sys.path.append("../")
@@ -204,14 +203,13 @@ class VLMQueryExecutor:
                     with torch.no_grad():
                         generated_ids = model.generate(**inputs, max_new_tokens=100)
                     generated_texts = processor.batch_decode(generated_ids, skip_special_tokens=True)
-                    answers = [text.split("Assistant:")[4] for text in generated_texts]
-                    #print("answers:", answers)
+                    answers = [text.split("Assistant:")[2] for text in generated_texts]
                     for answer in answers:
                         counter += ("yes" in answer.lower())
             
             test_df.loc[idx, "predicted_counts"] = counter
             #print("counter:", counter)
-            if (idx%10 == 0):
+            if (idx%5 == 0):
                 r_mae, r_rmse = mae(test_df.head(idx)["n_objects"], test_df.head(idx)["predicted_counts"]), rmse(test_df.head(idx)["n_objects"], test_df.head(idx)["predicted_counts"])
                 if not os.path.exists(os.path.dirname(self.config["output_path"])):
                     os.makedirs(os.path.dirname(self.config["output_path"]))  # Create any missing directories

@@ -96,11 +96,14 @@ class ObjectDetector:
             bbs_idxs = big_box_suppress(nms_boxes)
             bbs_boxes = [nms_boxes[i] for i in range(len(nms_boxes)) if not bbs_idxs.logical_not()[i]]
 
-            save_bboxes(img, bbs_boxes, "../../../../data/add_disk1/panos/abacus/bboxes/" + row["filename"][:-4] + "/")
+            print("bbs boxes:", bbs_boxes)
+            print("bbs boxes shape:", bbs_boxes.shape)
+
+            #save_bboxes(img, bbs_boxes, "../../../../data/add_disk1/panos/abacus/bboxes/" + row["filename"][:-4] + "/")
 
 
 
 if __name__ == "__main__":
-    detector = ObjectDetector("../data/FSC147_384_V2/annotations/abacus_v5.csv")
+    detector = ObjectDetector("../data/FSC147_384_V2/annotations/abacus_v8.csv")
     detector.main()
 

@@ -24,7 +24,7 @@ class IdeficsDataset(Dataset):
         self.image_processor = image_processor
         self.scaling_factor = scaling_factor
         
-        self.messages = [
+        """self.messages = [
             {
                 "role": "user",
                 "content": [
@@ -71,6 +71,29 @@ class IdeficsDataset(Dataset):
                     {"type": "text", "text": f"And how about this image? Is this is an image of {obj_prompt_notation}? Anwer with a yes or a no."},
                 ]
             },       
+        ]"""
+
+        self.messages = [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image"},
+                    {"type": "text", "text": f"Is this is an image of {obj_prompt_notation}? Anwer with a yes or a no."},
+                ]
+            },
+            {
+                "role": "assistant",
+                "content": [
+                    {"type": "text", "text": "Yes."},
+                ]
+            },
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image"},
+                    {"type": "text", "text": f"And how about this image? Is this is an image of {obj_prompt_notation}? Anwer with a yes or a no."},
+                ]
+            },       
         ]
 
         self.images = [path for path in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, path))]
@@ -82,26 +105,27 @@ class IdeficsDataset(Dataset):
     def __getitem__(self, idx):
         img_paths = self.image_folder + "/" + self.images[idx]
         prototype_path = self.prototypes_folder + "/" + self.prototypes[1]
-        prototype_path_2 = self.prototypes_folder + "/" + self.prototypes[2]
-        prototype_path_3 = self.prototypes_folder + "/" + self.prototypes[0]
+        #prototype_path_2 = self.prototypes_folder + "/" + self.prototypes[2]
+        #prototype_path_3 = self.prototypes_folder + "/" + self.prototypes[0]
 
         query_image = Image.open(img_paths)
         demo_image = Image.open(prototype_path)
-        demo_image_2 = Image.open(prototype_path_2)
-        demo_image_3 = Image.open(prototype_path_3)
+        #demo_image_2 = Image.open(prototype_path_2)
+        #demo_image_3 = Image.open(prototype_path_3)
 
         #query_image_rsd = query_image.resize((min(int(query_image.width * self.scaling_factor), 380), min(int(query_image.height * self.scaling_factor), 380)), Image.BICUBIC)
         #demo_image_rsd = demo_image.resize((min(int(demo_image.width * self.scaling_factor), 380), min(int(demo_image.height * self.scaling_factor), 380)), Image.BICUBIC)
 
-        query_image_rsd = query_image.resize((224, 224), Image.BICUBIC)
-        demo_image_rsd = demo_image.resize((224, 224), Image.BICUBIC)
-        demo_image_rsd_2 = demo_image_2.resize((224, 224), Image.BICUBIC)
-        demo_image_rsd_3 = demo_image_3.resize((224, 224), Image.BICUBIC)
+        query_image_rsd = query_image.resize((224, 224))
+        demo_image_rsd = demo_image.resize((224, 224))
+        """demo_image_rsd_2 = demo_image_2.resize((224, 224), Image.BICUBIC)
+        demo_image_rsd_3 = demo_image_3.resize((224, 224), Image.BICUBIC)"""
 
         """print("query img size:", query_image_rsd.size)
         print("demo image size:", demo_image_rsd.size)"""
         self.prompt = self.image_processor.apply_chat_template(self.messages, add_generation_prompt=True)
-        inputs = self.image_processor(text=self.prompt, images=[demo_image_rsd, demo_image_rsd_2, demo_image_rsd_3, query_image_rsd], return_tensors="pt")
+        #inputs = self.image_processor(text=self.prompt, images=[demo_image, demo_image_2, demo_image_3, query_image], return_tensors="pt")
+        inputs = self.image_processor(text=self.prompt, images=[demo_image_rsd, query_image_rsd], return_tensors="pt")
 
 
         return {"inputs": inputs}
