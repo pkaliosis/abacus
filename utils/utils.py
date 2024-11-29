@@ -71,7 +71,8 @@ def nms(
 
 
 def big_box_suppress(
-        detections
+        detections,
+        keep_large=False
     ):
     boxes = torch.tensor([list(d["box"].values()) for d in detections]).to(torch.float32)
     xmin = boxes[:,0].unsqueeze(-1)
@@ -80,10 +81,53 @@ def big_box_suppress(
     ymax = boxes[:,3].unsqueeze(-1)
     sz = boxes.shape[0]
 
-    keep_ind = ((xmax >= xmax.T)&(ymax >= ymax.T)&(xmin <= xmin.T)&(ymin <= ymin.T)&(torch.eye(sz).logical_not())).any(dim=-1).logical_not()
+    if keep_large:
+        keep_ind = ((xmax >= xmax.T)&(ymax >= ymax.T)&(xmin <= xmin.T)&(ymin <= ymin.T)&(torch.eye(sz).logical_not())).any(dim=-1)
+    else:
+        keep_ind = ((xmax >= xmax.T)&(ymax >= ymax.T)&(xmin <= xmin.T)&(ymin <= ymin.T)&(torch.eye(sz).logical_not())).any(dim=-1).logical_not()
     return keep_ind
 
 def save_bboxes(
+        image,
+        results,
+        output_dir : str =  "../outputs/bboxes/unknown/"
+    ):
+
+        # Ensure output directory exists
+        os.makedirs(output_dir, exist_ok=True)
+        prototype_dir = os.path.join(output_dir, "prototypes")
+        os.makedirs(prototype_dir, exist_ok=True)
+
+        # Process the detected bounding boxes and save the cropped areas
+        for i, result in enumerate(results):
+            # Get bounding box coordinates
+            box = result["box"]  # Expected to be a dict with "xmin", "ymin", "xmax", "ymax"
+
+            # Extract bounding box coordinates
+            xmin, ymin, xmax, ymax = int(box["xmin"]), int(box["ymin"]), int(box["xmax"]), int(box["ymax"])
+
+            # Optionally add some padding around the bounding box (optional, here it's 10 pixels padding)
+            padding = 5
+            xmin = max(0, xmin - padding)
+            ymin = max(0, ymin - padding)
+            xmax = min(image.width, xmax + padding)
+            ymax = min(image.height, ymax + padding)
+
+            # Crop the image based on the bounding box
+            cropped_image = image.crop((xmin, ymin, xmax, ymax))
+
+            # Save the upscaled cropped image as a .jpg file
+            output_path = os.path.join(output_dir, f"detected_object_{i + 1}.png")
+            cropped_image.save(output_path, "PNG", optimizer=True)
+
+            # Additionally save the first three detections in the "prototypes" folder
+            if i < 3:
+                prototype_output_path = os.path.join(prototype_dir, f"prototype_object_{i + 1}.png")
+                cropped_image.save(prototype_output_path, "PNG", optimizer=True)
+
+        print(f"Saved {len(results)} detected objects to {output_dir}\n")
+    
+def suppress_and_crop_bboxes(
         image,
         results,
         output_dir : str =  "../outputs/bboxes/unknown/"

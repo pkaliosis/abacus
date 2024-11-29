@@ -1,3 +1,6 @@
 [submodule "src/superresolution/Real-ESRGAN"]
 	path = src/superresolution/Real-ESRGAN
 	url = https://github.com/xinntao/Real-ESRGAN.git
+[submodule "src/DAVE"]
+	path = src/DAVE
+	url = https://github.com/jerpelhan/DAVE
