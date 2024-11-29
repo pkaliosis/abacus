@@ -5,8 +5,9 @@
     "model_family": "idefics",
     "pretrained_vlm_hf_id": "HuggingFaceM4/idefics2-8b",
     "df_path": "../data/FSC147_384_V2/annotations/abacus_v8.csv",
-    "bboxes_path": "../../../../data/add_disk1/panos/abacus/bboxes_sr/",
-    "output_path": "../outputs/dfs/idefics_1_shot_esrgan_resize224x224.csv",
+    "bboxes_path": "../../../../data/add_disk1/panos/abacus/bboxes_dave_sr/",
+    "output_path": "../outputs/dfs/idefics_dave_desc_3_shot_esrgan_resize512x512.csv",
+    "prototypes_origin_folder": "../../../../data/add_disk1/panos/abacus/bboxes_sr/",
     "prompt_template": "USER: <image>\nIs this {obj_prompt_notation}? Please answer with a yes or a no.\nASSISTANT:",
     "logging":  {
         "print_on_screen": true

@@ -7,6 +7,8 @@ import logging
 import numpy as np
 import pandas as pd
 from transformers import AutoProcessor, LlavaForConditionalGeneration, AutoModelForVision2Seq
+from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoProcessor
+from qwen_vl_utils import process_vision_info
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 from PIL import Image
@@ -18,6 +20,7 @@ from utils.evaluation import mae, rmse
 from utils.dataset import ZSOCDataset
 from utils.flamingo_dataset import FlamingoDataset
 from utils.idefics_dataset import IdeficsDataset
+from utils.qwen_dataset import QwenDataset
 
 class VLMQueryExecutor:
     def __init__(self, config_path):
@@ -117,6 +120,16 @@ class VLMQueryExecutor:
                 self.config["pretrained_vlm_hf_id"],
                 torch_dtype=torch.float16,
             ).to(self.device)
+            model.eval()
+        elif self.config["model_family"] == "qwen":
+            model = Qwen2VLForConditionalGeneration.from_pretrained(
+                "Qwen/Qwen2-VL-2B-Instruct", torch_dtype=torch.bfloat16, attn_implementation="sdpa"
+            ).to("cuda:4")
+            model.eval()
+            #min_pixels = 224 * 28 * 28
+            #max_pixels = 768 * 28 * 28
+            processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct")#, min_pixels=min_pixels, max_pixels=max_pixels)
+
 
         
         logging.info("Start iterating...")
@@ -129,6 +142,7 @@ class VLMQueryExecutor:
                     obj_prompt_notation = row["prompt_notation"],
                     obj_description = row["generated_description"],
                     prompt_template = self.config["prompt_template"],
+                    #prototypes_folder = self.config["prototypes_origin_folder"]
                     #prototypes_folder = object_imgs_path  + row["filename"][:-4] + "/prototypes"
                 )
             elif self.config["model_family"] == "flamingo":
@@ -150,7 +164,18 @@ class VLMQueryExecutor:
                     obj_class = row["class"],
                     obj_prompt_notation = row["prompt_notation"],
                     obj_description = row["generated_description"],
-                    prototypes_folder = object_imgs_path  + row["filename"][:-4] + "/prototypes",
+                    prototypes_folder = self.config["prototypes_origin_folder"],
+                    image_processor = processor,
+                    scaling_factor=4
+                )
+            elif self.config["model_family"] == "qwen":
+                dataset = QwenDataset(
+                    image_folder = object_imgs_path + row["filename"][:-4],
+                    obj_id = row["filename"][:-4],
+                    obj_class = row["class"],
+                    obj_prompt_notation = row["prompt_notation"],
+                    obj_description = row["generated_description"],
+                    prototypes_folder = self.config["prototypes_origin_folder"],
                     image_processor = processor,
                     scaling_factor=4
                 )
@@ -183,6 +208,7 @@ class VLMQueryExecutor:
                         clean_up_tokenization_spaces=False
                     )
                     answers = [text.split("ASSISTANT:")[1] for text in texts]
+                    print(answers)
                     for answer in answers:
                         counter += ("yes" in answer.lower())
                 elif self.config["model_family"] == "flamingo":
@@ -203,7 +229,19 @@ class VLMQueryExecutor:
                     with torch.no_grad():
                         generated_ids = model.generate(**inputs, max_new_tokens=100)
                     generated_texts = processor.batch_decode(generated_ids, skip_special_tokens=True)
-                    answers = [text.split("Assistant:")[2] for text in generated_texts]
+                    answers = [text.split("Assistant:")[4] for text in generated_texts]
+                    for answer in answers:
+                        counter += ("yes" in answer.lower())
+                elif self.config["model_family"] == "qwen":
+                    inputs = {k: v.squeeze(1).to("cuda:4") for k, v in batch["inputs"].items()}
+                    # Inference
+                    generated_ids = model.generate(**inputs, max_new_tokens=10)
+                    generated_ids_trimmed = [
+                        out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs["input_ids"], generated_ids)
+                    ]
+                    answers = processor.batch_decode(
+                        generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+                    )
                     for answer in answers:
                         counter += ("yes" in answer.lower())
             
