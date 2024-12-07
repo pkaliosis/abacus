@@ -1,6 +1,6 @@
 # ABACUS: Leveraging Vision-Language Models for Open-World Object Counting
 
-This repo contains the code for my CSE527 Computer Vision Project. Please follow the following instructions if you'd like to experiment with ABACUS or reproduce its reported results.
+This repo contains the code for my CSE527 Computer Vision Project. Please follow the instructions below if you'd like to experiment with ABACUS or reproduce its reported results.
 
 1. Download the FSC-147 Dataset.
 
